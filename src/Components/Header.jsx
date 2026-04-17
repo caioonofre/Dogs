@@ -5,7 +5,7 @@ import { UserContext } from '../UserContext';
 import { useContext } from 'react';
 
 const Header = () => {
-  const { data, userLogout } = useContext(UserContext);
+  const { data } = useContext(UserContext);
 
   return (
     <header className={styles.header}>
@@ -20,7 +20,6 @@ const Header = () => {
             aria-label="Dogs - Minha Conta"
           >
             {data.nome}
-            <button onClick={userLogout}>Logout</button>
           </Link>
         ) : (
           <Link className={styles.login} to="/login" aria-label="Dogs - Login">
