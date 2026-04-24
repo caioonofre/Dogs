@@ -7,8 +7,8 @@ const UseMedia = (media) => {
     function changeMatch() {
       setmatch(window.matchMedia('(max-width: 40rem)').matches);
     }
-    changeMatch();
     window.addEventListener('resize', changeMatch);
+    changeMatch();
     return () => {
       window.removeEventListener('resize', changeMatch);
     };
